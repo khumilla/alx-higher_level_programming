@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-uppercase = __import__('8-uppercase').uppercase
-
-uppercase("best")
-uppercase("Best School 98 Battery street")
+def uppercase(str):
+    """"Changes a given string from lowercase to upppercase"""
+    t = ''
+    for i in str:
+        if ord('a') <= ord(i) <= ord('z'):
+            t = t + chr(ord(i) - 32)
+        else:
+            t = t + i
+    print("{}".format(t))
